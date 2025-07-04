@@ -1,0 +1,136 @@
+/* ฟอนต์เว็บสวยๆ */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f6f8;
+  color: #333;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Header with animated gradient (Blue) */
+header {
+  background: linear-gradient(135deg, #2196F3, #1565C0);
+  background-size: 200% 200%;
+  animation: gradientMove 8s ease infinite;
+  color: white;
+  padding: 2em 1em;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+header h1 {
+  margin: 0 0 0.2em;
+  font-size: 2.5em;
+  letter-spacing: 1px;
+  animation: fadeIn 1s ease forwards;
+}
+
+header p {
+  font-size: 1.2em;
+  margin: 0;
+  opacity: 0.9;
+  animation: fadeIn 1.5s ease forwards;
+}
+
+/* Card style for server sections */
+section.server {
+  background-color: #ffffff;
+  margin: 2em auto;
+  padding: 2em;
+  max-width: 800px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.4s, box-shadow 0.4s, background-color 0.4s;
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: 0.5s;
+}
+
+section.server:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 24px rgba(0, 0, 0, 0.2);
+  background-color: #f2f8ff;
+}
+
+section.server h2 {
+  font-size: 1.8em;
+  margin-top: 0;
+  color: #1565C0;
+  border-bottom: 2px solid #BBDEFB;
+  padding-bottom: 0.5em;
+  position: relative;
+}
+
+section.server h2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 50px;
+  height: 3px;
+  background-color: #64B5F6;
+  border-radius: 2px;
+}
+
+section.server img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1.5em auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.4s;
+}
+
+section.server img:hover {
+  transform: scale(1.03);
+}
+
+section.server p {
+  margin: 0.8em 0;
+  font-size: 1.1em;
+}
+
+/* Footer with subtle gradient (Blue) */
+footer {
+  text-align: center;
+  padding: 1.5em 1em;
+  background: linear-gradient(135deg, #1565C0, #1E88E5);
+  color: white;
+  font-size: 0.95em;
+  margin-top: 3em;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2em;
+  }
+  header p {
+    font-size: 1em;
+  }
+  section.server {
+    padding: 1.5em 1em;
+  }
+}
